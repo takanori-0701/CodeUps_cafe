@@ -1,0 +1,66 @@
+@use "global" as *;
+
+/* トグル全体のスタイル */
+.toggle {
+    position: relative; /* 子要素の絶対位置を基準にする */
+    width: 60px; /* 60pxの正方形 */
+    height: 60px;
+    background: #53431E; /* 背景色を追加 */
+    z-index: 100;
+    display: flex; /* 中央揃えのためにフレックスボックスを使用 */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle.open {
+    background: transparent; /* 背景色を透明にする */
+}
+
+/* トグル内の線 */
+.toggle span {
+    background-color: #fff; /* 線の色を白に設定 */
+    position: absolute; /* 各線を配置 */
+    border-radius: 2px; /* 角を丸くしてデザイン性を向上 */
+    transition: transform 0.3s, opacity 0.3s; /* スムーズなアニメーション */
+}
+
+
+
+/* 各線の位置 */
+.toggle span:nth-child(1) {
+    top: 20%; /* 上部 */
+    width: 20px; /* 線の幅を指定 */
+    left: 20px;
+    top: 37%;
+    height: 1px; /* 線の高さを指定 */
+}
+
+.toggle span:nth-child(2) {
+    top: 50%; /* 中央 */
+    width: 16px; /* 線の幅を指定 */
+    height: 1px; /* 線の高さを指定 */
+    left: 20px;
+    transform: translateY(-50%);
+}
+.toggle span:nth-child(3) {
+    top: 80%; /* 下部 */
+    width: 16px; /* 線の幅を指定 */
+    left: 20px;
+    top: 61%;
+    height: 1px; /* 線の高さを指定 */
+}
+
+
+/* トグルが開いた状態のスタイル */
+.toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    width: rem(19);
+}
+.toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.toggle.open span:nth-child(3) {
+    transform: rotate(-44deg) translate(5px, -5px);
+    width: rem(19);
+}

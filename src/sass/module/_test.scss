@@ -1,1 +1,107 @@
 @use "global" as *;
+
+.fadeIn {
+	opacity: 0;
+	transition: .8s;
+	-webkit-transition: .8s;
+}
+.fadeIn.run {
+	opacity: 1;
+}
+.fadeIn_up {
+	opacity: 0;
+	transform: translate(0, 20px);
+	-webkit-transform: translate(0, 20px);
+	transition: .8s;
+	-webkit-transition: .8s;
+}
+.fadeIn_up.run {
+	transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+	opacity: 1;
+}
+.fadeIn_down {
+	opacity: 0;
+	transform: translate(0, -20px);
+	-webkit-transform: translate(0, -20px);
+	transition: .8s;
+	-webkit-transition: .8s;
+}
+.fadeIn_down.run {
+	transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+	opacity: 1;
+}
+.fadeIn_right {
+	opacity: 0;
+	transform: translate(20px, 0px);
+	-webkit-transform: translate(20px, 0px);
+	transition: .8s;
+	-webkit-transition: .8s;
+}
+.fadeIn_right.run {
+	transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+	opacity: 1;
+}
+.fadeIn_left {
+	opacity: 0;
+	transform: translate(-20px, 0px);
+	-webkit-transform: translate(-20px, 0px);
+	transition: .8s;
+	-webkit-transition: .8s;
+}
+.fadeIn_left.run {
+	transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+	opacity: 1;
+}
+.blur {
+	opacity: 0;
+	transition: .8s ease-out;
+	filter: blur(10px);
+}
+.blur.run {
+	opacity: 1;
+	filter: blur(0px);
+}
+
+
+.run .section_heading__en, .run .section_heading__ja span {
+    opacity: 1;
+    transform: translate(0px, 0px) scale(1, 1);
+    filter: blur(0px);
+}
+.section_heading__en {
+    transition-delay: .16s;
+}
+.section_heading__en, .section_heading__ja span {
+    display: inline-block;
+    opacity: 0;
+    transform: translate(0px, 80px) scale(1.25, 1.25);
+    transition: .7s ease-out;
+    filter: blur(10px);
+}
+
+@media (min-width: 1025px) {
+    #about .heading_wrap .section_heading__ja {
+        letter-spacing: 0.3em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section_heading__ja {
+        display: inline-block;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 61px;
+        letter-spacing: 0.25em;
+        text-align: left;
+        -webkit-writing-mode: vertical-rl;
+        -moz-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        -ms-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+    }
+}
+

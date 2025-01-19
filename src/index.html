@@ -19,19 +19,78 @@
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
   <!-- css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
-  </header>
-  <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <img src="./assets/images/common/CodeUps_cafe_logo.svg" alt="">
+      </h1>
+      <div class="header_drawer toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item"><a href="#">お知らせ</a></li>
+          <li class="pc-nav__item"><a href="#">こだわり</a></li>
+          <li class="pc-nav__item"><a href="#">メニュー</a></li>
+          <li class="pc-nav__item"><a href="#">店舗情報</a></li>
+          <li class="pc-nav__item"><a href="#">会社概要</a></li>
+        </ul>
+      </nav>
+      <nav class="header__sp-nav sp-nav">
+        <div class="sp-nav__nav">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item"><a href="#">トップ</a></li>
+            <li class="sp-nav__item"><a href="#">お知らせ</a></li>
+            <li class="sp-nav__item"><a href="#">こだわり</a></li>
+            <li class="sp-nav__item"><a href="#">メニュー</a></li>
+            <li class="sp-nav__item"><a href="#">店舗情報</a></li>
+            <li class="sp-nav__item"><a href="#">会社概要</a></li>
+          </ul>
+        </div>
+      </div>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <section class="main_visual">
+      <div class="main_visual__inner">
+        <div class="main-visual__img_left">
+          <img src="./assets/images/common/mv_img_main_sp.jpg" alt="">
+        </div>
+        <div class="main-visual__text">
+          <h2 class="main-visual__title">本と珈琲</h2>
+          <p class="main-visual__subtitle1">知の香り、</p>
+          <p class="main-visual__subtitle2">ここに満ちる。</p>
+        </div>
+        <div class="main-visual__img_right">
+          <img src="./assets/images/common/mv_img_sub.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <h2 class="section_title">
+      メニュー
+    </h2>
+    <div class="particular__btn inner">
+      <a href="#" class="common_btn">View More<span class="common_btn__arrow"></span></a>
+    </div>
+
+
+    <h2 class="heading_wrap pc Anime run">
+      <span class="section_heading__en ft_garamond">ABOUT</span>
+      <span class="section_heading__ja"><span>とくべつより、</span><br><span>ほんとうを。</span></span>
+    </h2>
   </main>
   <footer>
 

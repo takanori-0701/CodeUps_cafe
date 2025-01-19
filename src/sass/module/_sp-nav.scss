@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.sp-nav {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height:100vh;
+    background: rgba(83, 67, 30, 0.95);
+}
+
+.sp-nav__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sp-nav__item{
+    width: 100%;
+    line-height: 1.5;
+}
+
+.sp-nav__item:not(:last-child) {
+    margin-bottom: rem(52); /* 最後の要素以外に余白を適用 */
+}
+
+.sp-nav__item a{
+    color: $white;
+    font-size: rem(15);
+    display: inline-block;
+    text-align: center;
+    display: block;
+    letter-spacing: 0.05em;
+}
+    
+    

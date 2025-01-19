@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.header_drawer {
+    @include mq("md") {
+        display: none;
+    }
+}
