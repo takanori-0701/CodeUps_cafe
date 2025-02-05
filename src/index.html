@@ -22,8 +22,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
@@ -67,7 +69,12 @@
     <section class="main_visual">
       <div class="main_visual__inner">
         <div class="main-visual__img_left">
-          <img src="./assets/images/common/mv_img_main_sp.jpg" alt="">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./assets/images/common/mv_img_main_sp.jpg">
+            <source media="(max-width: 768px)" srcset="./assets/images/common/mv_img_main_pc.jpg">
+            <img src="./assets/images/common/mv_img_main_sp.jpg" alt="画像">
+          </picture>
+          <!-- <img src="./assets/images/common/mv_img_main_sp.jpg" alt=""> -->
         </div>
         <div class="main-visual__text">
           <h2 class="main-visual__title">本と珈琲</h2>
@@ -77,8 +84,79 @@
         <div class="main-visual__img_right">
           <img src="./assets/images/common/mv_img_sub.jpg" alt="">
         </div>
+        <div class="main_visual__scroll">
+          <span>Scroll</span>
+        </div>
       </div>
     </section>
+    <section class="recommendation">
+      <div class="recommendation__inner inner">
+        <div class="recommendation__slider">
+          <div class="recommendation__title">
+            <h2 class="section_title">
+              今月のおすすめ
+            </h2>
+          </div>
+          <!-- <div class="recommendation_slider_container">
+            <div class="swiper recommendation_swiper">
+              <ul class="swiper-wrapper recommendation_swiper_cards recommendation_card">
+                <li class="swiper-slide recommendation_card_item">
+                  <img src="./assets/images/common/suggest_img_01.jpg" alt="">
+                </li>
+                <li class="swiper-slide recommendation_card_item">
+                  <img src="./assets/images/common/suggest_img_02.jpg" alt="">
+                </li>
+                <li class="swiper-slide recommendation_card_item">
+                  <img src="./assets/images/common/suggest_img_03.jpg" alt="">
+                </li>
+                <li class="swiper-slide recommendation_card_item">
+                  <img src="./assets/images/common/suggest_img_04.jpg" alt="">
+                </li>
+              </ul>
+            </div>          
+            <div class="recommendation_swiper__swiper-button">
+              <div class="swiper-button-prev recommendation_swiper__swiper-button__left"></div>
+              <div class="swiper-button-next recommendation_swiper__swiper-button__right"></div>
+            </div>
+            <div class="swiper-pagination recommendation_swiper__pagination"></div>
+          </div> -->
+
+          <div class="recommendation__slider_container">
+            <div class="swiper js_recommendation_slider">
+              <!-- <div class="swiper-wrapper">
+                <div class="swiper-slide recommendation__slider_img"><img src="./assets/images/common/suggest_img_01.jpg" alt=""></div>
+                <div class="swiper-slide recommendation__slider_img"><img src="./assets/images/common/suggest_img_02.jpg" alt=""></div>
+                <div class="swiper-slide recommendation__slider_img"><img src="./assets/images/common/suggest_img_03.jpg" alt=""></div>
+                <div class="swiper-slide recommendation__slider_img"><img src="./assets/images/common/suggest_img_04.jpg" alt=""></div>
+              </div> -->
+            </div>
+            <div class="swiper-pagination js-recommendation-pagination"></div>
+            <div class="recommendation_swiper__swiper-button">
+              <div class="swiper-button-prev recommendation_swiper__swiper-button__left"></div>
+              <div class="swiper-button-next recommendation_swiper__swiper-button__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="commitment">
+      <div class="commitment__inner inner">
+        <div class="commitment__title">
+          <h2 class="section_title">
+            CodeUps cafeのこだわり
+          </h2>
+        </div>
+        <h3 class="commitment__sub_title">静寂な中に広がる、至福のひととき。</h3>
+        <p class="commitment__sub_txt">CodeUps cafeでは、本と共に過ごす上質な時間が貴方を包み込みます。
+          美味しいコーヒーの香りと共に、洗練された雰囲気の店内で、優雅な読書と心安らぐひとときをお楽しみください。</p>
+          <div class="commitment__btn">
+            <a href="#" class="common_btn">View More<span class="common_btn__arrow"></span></a>
+          </div>
+      </div>
+    </section>
+
+
     <h2 class="section_title">
       メニュー
     </h2>
@@ -87,10 +165,10 @@
     </div>
 
 
-    <h2 class="heading_wrap pc Anime run">
+    <!-- <h2 class="heading_wrap pc Anime run">
       <span class="section_heading__en ft_garamond">ABOUT</span>
       <span class="section_heading__ja"><span>とくべつより、</span><br><span>ほんとうを。</span></span>
-    </h2>
+    </h2> -->
   </main>
   <footer>
 
